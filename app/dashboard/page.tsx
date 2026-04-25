@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { MonthCalendar } from "@/components/month-calendar";
 import { StreakCalendar } from "@/components/streak-calendar";
 import { CheckInButton } from "./check-in-button";
 
@@ -97,6 +98,18 @@ export default async function DashboardPage() {
         </CardHeader>
         <CardContent>
           <StreakCalendar checkInDates={dates} />
+        </CardContent>
+      </Card>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>This month</CardTitle>
+          <CardDescription>
+            A closer look at the current month.
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <MonthCalendar checkInDates={dates} />
         </CardContent>
       </Card>
     </main>
